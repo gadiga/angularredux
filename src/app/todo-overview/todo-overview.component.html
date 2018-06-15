@@ -1,0 +1,10 @@
+<section>
+  <p class="text-right">
+    <details class="badge badge-secondary">
+      <summary>Click here for status</summary>
+      <p>Last Update: {{ (lastUpdate | async | date:'mediumTime') }}</p>
+      <footer>Total items: {{ (todoList | async).length}}</footer>
+    </details>
+  </p>
+  <button class="btn btn-danger" (click)="clearAllTodos()">Clear All Todos</button>
+</section>
